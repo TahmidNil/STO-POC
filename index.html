@@ -1,7 +1,82 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<body>
-<h1> Subdomain Takeover POC by Tahmid Islam </h1>
-</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subdomain takeover poc by Tahmid Islam</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #33ff33;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 0 0 10px #33ff33, 0 0 20px #33ff33;
+            animation: blink 1.5s infinite alternate;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #00ff00;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        a {
+            color: #00ffff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #ff00ff;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        .terminal {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00ff00;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: #33ff33;
+            animation: blink-cursor 0.8s infinite;
+            margin-left: 5px;
+        }
+
+        @keyframes blink-cursor {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
 </head>
+<body>
+    <div class="terminal">
+        <h1>Subdomain Takeover</h1>
+        <p>Owned by <strong>Tahmid Islam</strong><span class="cursor"></span></p>
+    </div>
+</body>
 </html>
